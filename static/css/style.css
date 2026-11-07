@@ -20,7 +20,6 @@ body {
 }
 
 .site-nav a {
-  display: block;
   padding: 1rem;
 }
 
@@ -32,14 +31,19 @@ body {
 .main-menu {
   display: flex;
   list-style: none;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 
 @media screen and (max-width: 48rem) {
-  .site-nav,
-  .main-menu {
+  .site-nav {
     flex-direction: column;
+  }
+
+  .main-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .site-nav a {

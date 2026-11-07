@@ -6,7 +6,7 @@
     <ul class="main-menu">
       {{ range $i, $page := .Site.Menus.main }}
       <li>
-        {{ if $i }}| {{ end }} <a href="{{ $page.URL }}">{{ $page.Name }}</a>
+        <a href="{{ $page.URL }}">{{ $page.Name }}</a>
       </li>
       {{ end }}
     </ul>

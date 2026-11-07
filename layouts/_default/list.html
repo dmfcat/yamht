@@ -9,9 +9,16 @@
   <h3>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </h3>
-	<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-		{{ .Date.Format "January 2, 2006" }}
-	</time>
+	{{ with .Date }}
+		<time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+			{{ .Format "02/01/2006" }}
+		</time>
+	{{ end }}
+	{{ with .Description }}
+		<p>
+			{{ . | truncate 80 }}
+		</p>
+	{{ end }}
 </article>
 {{ end }}
 
