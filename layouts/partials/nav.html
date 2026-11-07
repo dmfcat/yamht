@@ -1,0 +1,14 @@
+<header class="site-header">
+  <nav class="site-nav">
+    <a class="logo" href="{{ .Site.BaseURL }}">
+      {{ .Site.Title }}
+    </a>
+    <ul class="main-menu">
+      {{ range $i, $page := .Site.Menus.main }}
+      <li>
+        {{ if $i }}| {{ end }} <a href="{{ $page.URL }}">{{ $page.Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>
