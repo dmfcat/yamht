@@ -42,11 +42,19 @@ body {
     font-family: var(--font-main);
     font-size: var(--font-scale);
     line-height: 1.5;
-    padding: 1rem;
+    padding: 0rem;
     margin: 0 auto;
 }
 
 main {
+    display: block;
+    margin: auto;
+    max-width: var(--width);
+}
+
+footer {
+    display: block;
+    margin: auto;
     max-width: var(--width);
 }
 
@@ -66,11 +74,16 @@ a:hover {
 
 .site-header {
     background-color: var(--mantle-color);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .site-nav {
     display: flex;
-    max-width: calc(var(--nav-width) + 0.5 * 2);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: var(--width);
 }
 
 .site-nav a {
@@ -90,6 +103,10 @@ a:hover {
     align-items: center;
     margin: 0;
     padding: 0;
+}
+
+.menu a.active {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 48rem) {
