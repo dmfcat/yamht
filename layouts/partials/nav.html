@@ -1,14 +1,12 @@
 <header class="site-header">
-  <nav class="site-nav">
-    <a class="logo" href="{{ .Site.BaseURL }}">
-      {{ .Site.Title }}
-    </a>
-    <ul class="main-menu">
-      {{ range $i, $page := .Site.Menus.main }}
-      <li>
-        <a href="{{ $page.URL }}">{{ $page.Name }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
+    <nav class="site-nav">
+        <a class="logo" href="{{ .Site.BaseURL }}"> {{ .Site.Title }} </a>
+        <ul class="menu">
+            {{ range $i, $page := .Site.Menus.main }}
+                <li>
+                    <a href="{{ $page.URL }}">{{ $page.Name }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </nav>
 </header>

@@ -1,7 +1,13 @@
 {{ partial "header.html" . }}
 
-<h1>{{ .Title }}</h1>
 
-{{ .Content }}
+<main>
+    <header class="page-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+    <div class="page-content">
+        {{ .Content }}
+    </div>
+</main>
 
 {{ partial "footer.html" . }}
