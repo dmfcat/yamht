@@ -2,9 +2,15 @@
 
 
 <main>
-    <h1>404 Not Found</h1>
-    <p>The page you requested cannot be found.</p>
-    <p><a href="{{ site.Home.RelPermalink }}">Return to the home page</a></p>
+    <header class="page-header">
+        <h1>404 Not Found</h1>
+    </header>
+    <div class="page-content">
+        <p>The page you requested cannot be found.</p>
+        <p>
+            <a href="{{ site.Home.RelPermalink }}">Return to the home page</a>
+        </p>
+    </div>
 </main>
 
 {{ partial "footer.html" . }}

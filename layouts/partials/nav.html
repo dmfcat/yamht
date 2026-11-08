@@ -5,7 +5,9 @@
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
                 <li>
-                    {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+                    {{ if or ($currentPage.IsMenuCurrent "main" .)
+                        ($currentPage.HasMenuCurrent "main" .)
+                    }}
                         <a class="active" aria-current="page" href="{{ .URL }}"
                             >{{ .Name }}</a
                         >
