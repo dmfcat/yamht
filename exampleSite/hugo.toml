@@ -1,16 +1,19 @@
 baseURL = "https://example.com"
-title = "Example Site"
+title = "yamht"
 theme = "yamht"
 
 [menu]
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
+    name = "/home"
+    pageRef = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "/single"
+    pageRef = "/single"
     weight = 10
 
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
+    name = "/list"
+    pageRef = "/list"
     weight = 20
