@@ -1,6 +1,6 @@
 baseURL = "https://example.com"
 title = "Example Site"
-theme = "yahmt"
+theme = "yamht"
 
 [menu]
   [[menu.main]]
