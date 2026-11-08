@@ -1,5 +1,23 @@
 /* Root Variables */
 :root {
+    /* Typography */
+    --font-main: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+    --font-heading:
+        Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+    --font-code:
+        ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+        "DejaVu Sans Mono", monospace;
+    --font-ui: system-ui, sans-serif;
+    --font-main-size: 1rem;
+    --font-h1-size: 2.5rem;
+    --font-h2-size: 2rem;
+    --font-h3-size: 1.75rem;
+    --font-h4-size: 1.5rem;
+    --font-footer-size: 0.8rem;
+    --font-logo-size: 1.2rem;
+    --weight-body: 400;
+    --weight-heading: 700;
+    --weight-subheading: 600;
     /* Widths */
     --width-body: 50rem;
     --width-nav: 75rem;
@@ -12,6 +30,7 @@
     --text-color: #4c4f69;
     --subtext-color: #5c5f77;
     --link-color: #1e66f5;
+    --visited-color: #8839ef;
     --accent-color: #209fb5;
 }
 
@@ -25,6 +44,7 @@
         --text-color: #c6d0f5;
         --subtext-color: #b5bfe2;
         --link-color: #8caaee;
+        --visited-color: #ca9ee6;
         --accent-color: #85c1dc;
     }
 }
@@ -37,6 +57,17 @@ html {
 body {
     margin: 0 auto;
     padding: 0rem;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+    font-size: var(--font-main-size);
+    font-family: var(--font-main);
+    font-weight: var(--weight-body);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 main {
@@ -44,16 +75,67 @@ main {
     margin-inline: auto;
     width: min(calc(100% - 2 * var(--gutter)), var(--width-body));
     display: block;
+
+    flex: 1;
 }
 
 footer {
-    margin: auto;
-    display: block;
     text-align: center;
+    background-color: var(--mantle-color);
+
+    font-size: var(--font-footer-size);
+    color: var(--subtext-color);
+}
+
+footer a {
+    text-decoration: none;
 }
 
 .content {
     margin-bottom: 2rem;
+}
+
+/* Headings */
+h1 {
+    font-size: var(--font-h1-size);
+    font-weight: var(--weight-heading);
+}
+
+h2 {
+    font-size: var(--font-h2-size);
+    font-weight: var(--weight-subheading);
+}
+
+h3 {
+    font-size: var(--font-h3-size);
+    font-weight: var(--weight-subheading);
+}
+
+h4 {
+    font-size: var(--font-h4-size);
+    font-weight: var(--weight-subheading);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+}
+
+main a:visited {
+    color: var(--visited-color);
+}
+
+a:hover {
+    color: var(--accent-color);
 }
 
 /* Navbar */
@@ -70,6 +152,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    font-family: var(--font-ui);
 }
 
 .site-nav a {
@@ -79,6 +163,11 @@ footer {
 
 .site-nav .logo {
     padding-left: 0;
+
+    font-size: var(--font-logo-size);
+    font-family: var(--font-code);
+    font-weight: bold;
+    color: var(--heading-color);
 }
 
 .menu {
