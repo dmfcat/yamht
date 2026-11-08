@@ -25,10 +25,10 @@
                     </div>
                 {{ end }}
 
-                {{ with .Description }}
+                {{ with .Summary }}
                     <div class="post-content">
                         <p>
-                            {{ . | truncate 80 }}
+                            {{ . | truncate 280 }}
                         </p>
                     </div>
                 {{ end }}
