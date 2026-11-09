@@ -8,9 +8,7 @@
                     {{ if or ($currentPage.IsMenuCurrent "main" .)
                         ($currentPage.HasMenuCurrent "main" .)
                     }}
-                        <a class="active" aria-current="page" href="{{ .URL }}"
-                            >{{ .Name }}</a
-                        >
+                        <a class="active" href="{{ .URL }}">{{ .Name }}</a>
                     {{ else }}
                         <a href="{{ .URL }}">{{ .Name }}</a>
                     {{ end }}

@@ -10,12 +10,12 @@
             </div>
         {{ end }}
     </header>
-    {{ with .Params.author }}
-        <p class="page-author">{{ . }}</p>
-    {{ end }}
 
-    {{ if or .Date .Params.showwordcount }}
+    {{ if or .Params.author .Date .Params.showwordcount }}
         <div class="page-info">
+            {{ with .Params.author }}
+                <p class="page-author">{{ . }}</p>
+            {{ end }}
             {{ with .Date }}
                 <span class="page-date">
                     <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
@@ -32,6 +32,17 @@
     <div class="page-content">
         {{ .Content }}
     </div>
+
+    {{ with .GetTerms "tags" }}
+        <div class="page-tags">
+            <p class="tags">
+                {{ range . }}
+                    <!-- prettier-ignore -->
+                    <span class="tag"><a href="{{ .RelPermalink }}">#{{ .Name }}</a></span>
+                {{ end }}
+            </p>
+        </div>
+    {{ end }}
 </main>
 
 {{ partial "footer.html" . }}
