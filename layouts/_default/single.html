@@ -4,9 +4,9 @@
 <main>
     <header class="page-header">
         <h1>{{ .Title }}</h1>
-        {{ with .Description }}
-            <div class="page-subheader">
-                <h3>{{ . }}</h3>
+        {{ with .Description | plainify }}
+            <div class="page-description">
+                <p>{{ . }}</p>
             </div>
         {{ end }}
     </header>
