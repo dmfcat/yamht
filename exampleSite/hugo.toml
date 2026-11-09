@@ -12,17 +12,16 @@ theme = "yamht"
     weight = 1
 
   [[menu.main]]
-    name = "Single"
-    pageRef = "/single"
+    name = "About"
+    pageRef = "/about"
     weight = 10
 
   [[menu.main]]
-    name = "List"
-    pageRef = "/list"
+    name = "Posts"
+    pageRef = "/posts"
     weight = 20
 
   [[menu.main]]
     name = "Tags"
     pageRef = "/tags"
     weight = 999
-
