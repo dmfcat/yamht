@@ -1,4 +1,8 @@
----
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
----
++++
+draft = true
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+date = '{{ .Date }}'
+author = ""
+showDate = true
+showWordCount = true
++++
