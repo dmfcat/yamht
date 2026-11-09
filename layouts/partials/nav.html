@@ -4,7 +4,7 @@
         <ul class="menu">
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
-                <li>
+                <li class="menu-item">
                     {{ if or ($currentPage.IsMenuCurrent "main" .)
                         ($currentPage.HasMenuCurrent "main" .)
                     }}

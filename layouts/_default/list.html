@@ -4,35 +4,47 @@
 <main>
     <h1>{{ .Title }}</h1>
 
-    <div class="page-content">
+    <div class="posts">
         {{ .Content }}
 
         {{ range.Data.Pages }}
-            <article class="post-snippet">
-                <header class="post-header">
-                    <h2>
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </h2>
-                </header>
+            <a class="post-snippet" href="{{ .RelPermalink }}">
+                <article>
+                    <header class="post-header">
+                        <h3>
+                            {{ .Title }}
+                        </h3>
+                    </header>
+                    {{ with .Summary }}
+                        <div class="post-content">
+                            <p>
+                                {{ . | truncate 140 }}
+                            </p>
+                        </div>
+                    {{ end }}
+                    <div class="post-info">
+                        {{ with .Params.author }}
+                            <span class="page-author">{{ . }}</span>
+                        {{ end }}
 
-                {{ with .Date }}
-                    <div class="post-time">
-                        <time
-                            datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}"
-                        >
-                            {{ .Format "02/01/2006" }}
-                        </time>
-                    </div>
-                {{ end }}
+                        {{ with .Date }}
+                            <span class="post-date">
+                                <time
+                                    datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}"
+                                >
+                                    {{ .Format "Monday, 2 January, 2006" }}
+                                </time>
+                            </span>
+                        {{ end }}
 
-                {{ with .Summary }}
-                    <div class="post-content">
-                        <p>
-                            {{ . | truncate 280 }}
-                        </p>
+                        {{ if .Params.showwordcount }}
+                            <span class="word-count"
+                                >{{ .WordCount }} Words</span
+                            >
+                        {{ end }}
                     </div>
-                {{ end }}
-            </article>
+                </article>
+            </a>
         {{ end }}
     </div>
 </main>
