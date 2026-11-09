@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+
+<main>
+    <header class="page-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+    <div class="tag-terms">
+        {{ range site.Taxonomies.tags.ByCount }}
+            {{ $tagPage := site.GetPage (printf "/tags/%s" (.Term | urlize)) }}
+            <!-- prettier-ignore -->
+            <span class="tag"><a href="{{ $tagPage.RelPermalink }}">#{{ .Term }}<sup>{{ .Count }}</sup></a></span>
+        {{ else }}
+            <p>No tags found</p>
+        {{ end }}
+    </div>
+</main>
+
+{{ partial "footer.html" . }}
