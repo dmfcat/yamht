@@ -20,7 +20,7 @@
                     {{ with .Summary }}
                         <div class="post-content">
                             <p>
-                                {{ . | truncate 140 }}
+                                {{ . | plainify | truncate 140 }}
                             </p>
                         </div>
                     {{ end }}
