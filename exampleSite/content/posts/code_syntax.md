@@ -1,122 +1,50 @@
 +++
-author = ["Aditya Telange"]
+author = "dmfcat"
 title = "Code Syntax Guide"
-date = "2019-03-10"
-description = "Sample article showcasing basic code syntax and formatting for HTML elements."
+date = "2016-11-09"
+description = "Sample article showcasing fenced code blocks."
 tags = ["markdown", "syntax", "code",]
+showWordCount = true
 +++
 
-### Inline Code
+This article shows example fenced code blocks
 
-`This is Inline Code`
+## Inline Code
 
-### Only `pre`
+`print("Hello World")`
 
-<pre>
-This is pre text
-</pre>
+## Code Block With No Syntax Highlighting
 
-### Code block with backticks
+```
+# Fibonacci sequence
+def fib(n):
+  if fib < 2:
+    return n
 
-```{hl_lines=[2,8]}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
+  return fib(n-1) + fib(n-2)
 ```
 
-### Code block with backticks and language specified
+## Code Blocks With Syntax Highlighting
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
+```py
+# Fibonacci sequence (Python)
+def fib(n: int) -> int:
+    if n <= 1:
+        return n
+
+    return fib(n - 1) + fib(n - 2)
+
 ```
 
-### Code block with backticks and language specified with line numbers
+```go
+// Fibonacci sequence (Go)
+func fib(n int) int {
+	if n <= 1 {
+		return n
+	}
+	return fib(n-1) + fib(n-2)
+}
 
-```html {linenos=true}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
 ```
 
-### Code block with line numbers and <mark>highlighted</mark> lines
-
-```html {linenos=true,hl_lines=[2,8]}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
-```
-
-### Code block indented with four spaces
-
-    <!doctype html>
-    <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>Example HTML5 Document</title>
-    </head>
-    <body>
-      <p>Test</p>
-    </body>
-    </html>
-
-### Code block with Hugo's internal highlight shortcode
-
-{{< highlight html >}}
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
-{{< /highlight >}}
+Notice how the Python 'tabs' are four spaces, while the Go tabs are actual tabs!

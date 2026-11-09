@@ -5,6 +5,7 @@ theme = "yamht"
 [params]
   name = "yamht"
 
+# Navbar
 [menu]
   [[menu.main]]
     name = "Home"
@@ -25,3 +26,8 @@ theme = "yamht"
     name = "Tags"
     pageRef = "/tags"
     weight = 999
+
+# Code block theme
+[markup.highlight]
+    style = "catppuccin-frappe"
+    linenos = "table"
