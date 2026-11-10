@@ -31,14 +31,12 @@
         {{ .Content }}
     </div>
     {{ with .GetTerms "tags" }}
-        <div class="page-tags">
-            <p class="tags">
-                {{ range . }}
-                    <!-- prettier-ignore -->
-                    <span class="tag"><a href="{{ .RelPermalink }}">#{{ .Name }}</a></span>
-                {{ end }}
-            </p>
-        </div>
+        <p class="page-tags">
+            {{ range . }}
+                <!-- prettier-ignore -->
+                <span class="tag"><a href="{{ .RelPermalink }}">#{{ .Name }}</a></span>
+            {{ end }}
+        </p>
     {{ end }}
 </main>
 
