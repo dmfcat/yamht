@@ -4,6 +4,7 @@ author = ""
 title = "About"
 date = ""
 tags = []
+showReadTime = false
 showWordCount = false
 +++
 
