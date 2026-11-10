@@ -17,7 +17,7 @@ This article shows example fenced code blocks.
 ```
 # Fibonacci sequence
 def fib(n):
-  if fib < 2:
+  if fib <= 1:
     return n
 
   return fib(n-1) + fib(n-2)
