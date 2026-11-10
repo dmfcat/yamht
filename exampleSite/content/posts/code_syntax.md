@@ -1,13 +1,12 @@
 +++
-author = "dmfcat"
+author = "Author"
 title = "Code Syntax Guide"
-date = "2016-11-09"
-description = "Sample article showcasing fenced code blocks."
+date = "2026-11-09"
 tags = ["markdown", "syntax", "code",]
 showWordCount = true
 +++
 
-This article shows example fenced code blocks
+This article shows example fenced code blocks.
 
 ## Inline Code
 

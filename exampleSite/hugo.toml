@@ -1,4 +1,5 @@
 baseURL = "https://example.com"
+locale = "en-gb"
 title = "yamht"
 theme = "yamht"
 
