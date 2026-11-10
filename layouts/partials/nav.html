@@ -15,5 +15,27 @@
                 </li>
             {{ end }}
         </ul>
+        <div class="burger-menu">
+            <input type="checkbox" id="burger-toggle" />
+            <label for="burger-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="burger-items">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                    <li class="burger-item">
+                        {{ if or ($currentPage.IsMenuCurrent "main" .)
+                            ($currentPage.HasMenuCurrent "main" .)
+                        }}
+                            <a class="active" href="{{ .URL }}">{{ .Name }}</a>
+                        {{ else }}
+                            <a href="{{ .URL }}">{{ .Name }}</a>
+                        {{ end }}
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
     </nav>
 </header>
