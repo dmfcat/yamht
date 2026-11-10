@@ -1,8 +1,8 @@
 +++
 draft = true
+author = ""
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = '{{ .Date }}'
-author = ""
-showDate = true
+tags = []
 showWordCount = true
 +++
