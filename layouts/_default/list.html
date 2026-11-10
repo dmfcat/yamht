@@ -5,10 +5,8 @@
     <header class="page-header">
         <h1>{{ .Title }}</h1>
     </header>
-
     <div class="posts">
         {{ .Content }}
-
         {{ range.Data.Pages }}
             <a class="post-snippet" href="{{ .RelPermalink }}">
                 <article>
@@ -28,7 +26,6 @@
                         {{ with .Params.author }}
                             <span class="post-author">{{ . }}</span>
                         {{ end }}
-
                         {{ with .Date }}
                             <span class="post-date">
                                 <time
@@ -38,11 +35,9 @@
                                 </time>
                             </span>
                         {{ end }}
-
                         {{ if .Params.showwordcount }}
-                            <span class="word-count"
-                                >{{ .WordCount }} Words</span
-                            >
+                            <!-- prettier-ignore -->
+                            <span class="word-count">{{ .WordCount }} Words</span>
                         {{ end }}
                     </div>
                 </article>

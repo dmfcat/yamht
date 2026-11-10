@@ -4,30 +4,30 @@
 <main>
     <header class="page-header">
         <h1>{{ .Title }}</h1>
+        {{ if or .Params.author .Date .Params.showwordcount }}
+            <div class="page-info">
+                {{ with .Params.author }}
+                    <p class="page-author">{{ . }}</p>
+                {{ end }}
+                {{ with .Date }}
+                    <span class="page-date">
+                        <time
+                            datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}"
+                        >
+                            {{ .Format "Monday, 2 January, 2006" }}
+                        </time>
+                    </span>
+                {{ end }}
+
+                {{ if .Params.showwordcount }}
+                    <span class="word-count">{{ .WordCount }} Words</span>
+                {{ end }}
+            </div>
+        {{ end }}
     </header>
-
-    {{ if or .Params.author .Date .Params.showwordcount }}
-        <div class="page-info">
-            {{ with .Params.author }}
-                <p class="page-author">{{ . }}</p>
-            {{ end }}
-            {{ with .Date }}
-                <span class="page-date">
-                    <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
-                        {{ .Format "Monday, 2 January, 2006" }}
-                    </time>
-                </span>
-            {{ end }}
-
-            {{ if .Params.showwordcount }}
-                <span class="word-count">{{ .WordCount }} Words</span>
-            {{ end }}
-        </div>
-    {{ end }}
     <div class="page-content">
         {{ .Content }}
     </div>
-
     {{ with .GetTerms "tags" }}
         <div class="page-tags">
             <p class="tags">
