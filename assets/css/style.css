@@ -294,13 +294,13 @@ hr {
 #burger-toggle {
     display: none;
 }
-.hamburger {
+.burger {
     position: relative;
     width: 2rem;
     height: 1.5rem;
     cursor: pointer;
 }
-.hamburger span {
+.burger span {
     position: absolute;
     left: 0;
     top: 50%;
@@ -345,18 +345,18 @@ body:has(#burger-toggle:checked) {
 }
 
 /* Burger Transform */
-.hamburger span:nth-child(1) {
+.burger span:nth-child(1) {
     transform: translateY(calc(-50% - 0.5rem));
 }
-.hamburger span:nth-child(3) {
+.burger span:nth-child(3) {
     transform: translateY(calc(-50% + 0.5rem));
 }
-#burger-toggle:checked ~ .hamburger span:nth-child(1) {
+#burger-toggle:checked ~ .burger span:nth-child(1) {
     transform: translateY(-50%) rotate(45deg);
 }
-#burger-toggle:checked ~ .hamburger span:nth-child(2) {
+#burger-toggle:checked ~ .burger span:nth-child(2) {
     opacity: 0;
 }
-#burger-toggle:checked ~ .hamburger span:nth-child(3) {
+#burger-toggle:checked ~ .burger span:nth-child(3) {
     transform: translateY(-50%) rotate(-45deg);
 }
