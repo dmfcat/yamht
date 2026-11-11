@@ -158,7 +158,7 @@ footer a:focus-visible,
 }
 .site-nav .logo {
     font-size: var(--font-logo-size);
-    font-family: var(--font-code);
+    font-family: var(--font-heading);
     font-weight: bold;
     color: var(--text-color);
     flex: 0 0 auto;
