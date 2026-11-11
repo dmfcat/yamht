@@ -27,8 +27,9 @@
     {{ with .GetTerms "tags" }}
         <p class="page-tags">
             {{ range . }}
-                <!-- prettier-ignore -->
-                <span class="tag"><a href="{{ .RelPermalink }}">#{{ .Name }}</a></span>
+                <span class="tag"
+                    ><a href="{{ .RelPermalink }}">#{{ .Name }}</a></span
+                >
             {{ end }}
         </p>
     {{ end }}
