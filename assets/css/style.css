@@ -15,7 +15,7 @@
     --font-footer-size: 0.8rem;
     --font-logo-size: 1.5rem;
     --width-body: 60rem;
-    --width-nav: 64rem;
+    --width-nav: 66rem;
     --gutter: 1rem;
     --background-color: #eff1f5;
     --mantle-color: #e6e9ef;
@@ -162,6 +162,8 @@ footer a:focus-visible,
     font-weight: bold;
     color: var(--text-color);
     flex: 0 0 auto;
+    padding: 1rem;
+    margin-left: 0.5rem;
 }
 .logo:hover,
 .logo:focus-visible {
@@ -286,6 +288,10 @@ hr {
 @media screen and (max-width: 32rem) {
     .menu {
         display: none;
+    }
+    .site-nav .logo {
+        margin-left: 0;
+        padding: 0;
     }
     .burger-menu {
         display: flex;
