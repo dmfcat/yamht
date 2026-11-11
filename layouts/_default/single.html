@@ -4,28 +4,21 @@
 <main>
     <header class="page-header">
         <h1>{{ .Title }}</h1>
-        {{ if or .Params.author .Date .Params.showwordcount }}
-            <div class="page-info">
-                {{ with .Params.author }}
-                    <p class="page-author">{{ . }}</p>
+        {{ if or .Date .Params.showreadtime .Params.showwordcount }}
+            <p class="page-info">
+                {{ with .Date }}
+                    <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+                        {{ .Format "2 January, 2006" }}
+                    </time>
+                    |
                 {{ end }}
-                <p>
-                    {{ with .Date }}
-                        <time
-                            datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}"
-                        >
-                            {{ .Format "2 January, 2006" }}
-                        </time>
-                        |
-                    {{ end }}
-                    {{ if .Params.showreadtime }}
-                        {{ .ReadingTime }} min read |
-                    {{ end }}
-                    {{ if .Params.showwordcount }}
-                        {{ .WordCount }} words
-                    {{ end }}
-                </p>
-            </div>
+                {{ if .Params.showreadtime }}
+                    {{ .ReadingTime }} min read |
+                {{ end }}
+                {{ if .Params.showwordcount }}
+                    {{ .WordCount }} words
+                {{ end }}
+            </p>
         {{ end }}
     </header>
     <div class="page-content">

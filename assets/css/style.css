@@ -192,7 +192,7 @@ footer a:focus-visible,
 .post-header h3 {
     margin: 1rem 0 0.2rem;
 }
-.post-content {
+.post-summary {
     color: var(--text-color);
 }
 .post-snippet:not(:last-child),
@@ -208,11 +208,6 @@ footer a:focus-visible,
     font-size: var(--font-footer-size);
     color: var(--subtext-color);
 }
-.page-author {
-    font-size: var(--font-main-size);
-}
-.page-author,
-.post-author,
 .tag a,
 .tag sup {
     font-weight: bold;
@@ -220,12 +215,11 @@ footer a:focus-visible,
 .page-tags {
     border-top: 1px solid var(--surface-color);
     padding-top: 1.5rem;
-    margin-top: 1.5rem;
 }
-
-/* Terms */
-.tag-terms {
-    margin-top: 1rem;
+.page-tags,
+.tags {
+    margin-top: 1.5rem;
+    word-spacing: 0.5rem;
 }
 
 /* Code Blocks */

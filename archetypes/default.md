@@ -1,6 +1,5 @@
 +++
 draft = true
-author = '{{ .Site.Params.name }}'
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = '{{ .Date }}'
 tags = []
