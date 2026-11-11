@@ -1,5 +1,5 @@
 {{ $src := .Get "src" }}
-{{ with .Page.Resources.Get $src -}}
+{{ with .Page.Resources.Get $src }}
     <video controls preload="auto" src="{{ .RelPermalink }}"></video>
 {{ else }}
     <p>Video not found: {{ $src }}</p>
