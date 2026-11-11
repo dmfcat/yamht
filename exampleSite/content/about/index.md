@@ -1,5 +1,6 @@
 +++
 draft = false
+author = ""
 title = "About"
 date = ""
 tags = []
