@@ -267,6 +267,7 @@ hr {
     border-bottom: 1px solid var(--surface-color);
 }
 
+/* Separators */
 .page-info span:not(:last-child)::after,
 .post-info span:not(:last-child)::after {
     content: " | ";
