@@ -1,21 +1,53 @@
 # yamht
 
-Yet Another Minimal Hugo Theme.
+Yet another minimal Hugo theme.
 
-## Getting started
+yamht is a minimalist website theme for Hugo.
 
-Inside your project folder, copy the theme to your `themes` folder. Since you're just using it as a starter for your theme, remove the git history.
+## Features
+
+- Minimalist monochrome design with an accent colour.
+- Automatic light/dark theme switching between two Catppuccin pastel themes.
+- Responsive layout, with a hamburger menu on mobile devices.
+- Shortcodes for embedding videos and images.
+- Support for blog posts
+- Dedicated page for browsing posts by tag.
+
+## Getting Started
+
+Make sure you have [Hugo](https://gohugo.io/installation/) and [Git](https://git-scm.com/install/) installed.
+
+1. Create a new project
 
 ```bash
-git clone https://github.com/ericmurphyxyz/hugo-starter-theme themes/your-theme-name
-rm -rf themes/your-theme-name/.git
+hugo new project website-name
+cd website-name
 ```
 
-If you'd like some example content and an example config file to get started, you can copy the `exampleSite` directory into your root Hugo directory.
+2. Clone this repo into your projects `themes` directory
 
 ```bash
-cp -r themes/your-theme-name/exampleSite/* ./
+git clone https://github.com/dmfcat/yamht themes
 ```
 
-To learn more about building themes in Hugo, refer to Hugo's [templating documentation](https://gohugo.io/templates/).
+3. Add yamht to your `hugo.toml`
 
+```bash
+echo "theme = yamht" >> hugo.toml
+```
+
+4. Start a development server, and click the `localhost` link to view the theme
+
+```bash
+hugo serve
+```
+
+You can optionally copy the example site provided with the theme into your project directory
+
+```bash
+cp -r themes/yamht/exampleSite/* ./
+```
+
+## Licence
+
+[MIT](LICENCE)
