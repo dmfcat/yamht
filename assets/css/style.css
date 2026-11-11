@@ -267,6 +267,11 @@ hr {
     border-bottom: 1px solid var(--surface-color);
 }
 
+.page-info span:not(:last-child)::after,
+.post-info span:not(:last-child)::after {
+    content: " | ";
+}
+
 /* Mobile */
 .burger-menu {
     display: none;
