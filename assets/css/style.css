@@ -129,8 +129,8 @@ main a:visited {
 .post-snippet:focus-visible h3,
 footer a:hover,
 footer a:focus-visible,
-.menu a[aria-current="page"],
-.burger-menu a[aria-current="page"] {
+.menu-item a[aria-current="page"],
+.burger-item a[aria-current="page"] {
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
@@ -148,8 +148,8 @@ footer a:focus-visible,
 .burger-item a {
     padding: 1rem;
 }
-.menu a:hover,
-.menu a:focus-visible,
+.menu-items a:hover,
+.menu-items a:focus-visible,
 .burger-item a:hover,
 .burger-item a:focus-visible {
     background-color: var(--surface-color);
@@ -167,7 +167,7 @@ footer a:focus-visible,
 .logo:focus-visible {
     color: var(--accent-color);
 }
-.menu {
+.menu-items {
     display: flex;
     align-items: center;
     list-style: none;
@@ -292,17 +292,22 @@ hr {
         position: relative;
         align-items: center;
     }
+    body:has(.burger-menu details[open]) {
+        overflow: hidden;
+    }
 }
 
-/* Burger Menu */
-#burger-toggle {
+/* Burger Icon */
+.burger::-webkit-details-marker {
     display: none;
 }
 .burger {
     position: relative;
+    display: block;
     width: 2rem;
     height: 1.5rem;
     cursor: pointer;
+    list-style: none;
 }
 .burger span {
     position: absolute;
@@ -321,7 +326,21 @@ hr {
     transform: translateY(calc(-50% + 0.5rem));
 }
 
-/* Burger menu items */
+/* Open Burger Icon */
+.burger-menu details[open] > .burger-items {
+    display: flex;
+}
+.burger-menu details[open] .burger span:nth-child(1) {
+    transform: translateY(-50%) rotate(45deg);
+}
+.burger-menu details[open] .burger span:nth-child(2) {
+    opacity: 0;
+}
+.burger-menu details[open] .burger span:nth-child(3) {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Burger Items */
 .burger-items {
     display: none;
     position: fixed;
@@ -331,12 +350,12 @@ hr {
     bottom: 0;
     background-color: var(--mantle-color);
     padding: 1rem;
+    margin: 0;
     flex-direction: column;
     gap: 1.5rem;
     list-style: none;
-    z-index: 999;
+    z-index: 1000;
     overflow-y: auto;
-    margin: 0;
 }
 .burger-item {
     width: 100%;
@@ -346,24 +365,4 @@ hr {
     color: var(--accent-color);
     display: block;
     font-weight: bold;
-}
-
-/* Shows burger items */
-#burger-toggle:checked ~ .burger-items {
-    display: flex;
-}
-#burger-toggle:checked ~ body,
-body:has(#burger-toggle:checked) {
-    overflow: hidden;
-}
-
-/* Burger Transform */
-#burger-toggle:checked ~ .burger span:nth-child(1) {
-    transform: translateY(-50%) rotate(45deg);
-}
-#burger-toggle:checked ~ .burger span:nth-child(2) {
-    opacity: 0;
-}
-#burger-toggle:checked ~ .burger span:nth-child(3) {
-    transform: translateY(-50%) rotate(-45deg);
 }
