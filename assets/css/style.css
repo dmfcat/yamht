@@ -267,6 +267,14 @@ hr {
     border-bottom: 1px solid var(--surface-color);
 }
 
+/* Media */
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* Separators */
 .page-info span:not(:last-child)::after,
 .post-info span:not(:last-child)::after {

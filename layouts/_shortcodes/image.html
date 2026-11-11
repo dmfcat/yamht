@@ -1,0 +1,11 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ with .Page.Resources.Get $src }}
+    <img src="{{ .RelPermalink }}" alt="{{ $alt }}"></img>
+{{ else }}
+    <p>Image not found: {{ $src }}</p>
+    {{ warnf "The %q shortcode was unable to find %s, see %s" $.Name $src $.Position }}
+    {{ if not $alt }}
+        {{ warnf "The %q shortcode has no alt text, see %s" $.Name $.Position }}
+    {{ end }}
+{{ end }}
