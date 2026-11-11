@@ -228,16 +228,6 @@ footer a:focus-visible,
     margin-top: 1rem;
 }
 
-/* Separators */
-.page-info > span:not(:last-child)::after,
-.post-info > span:not(:last-child)::after {
-    content: " | ";
-}
-span.tag:not(:last-child)::after {
-    content: ",";
-    margin-right: 0.2rem;
-}
-
 /* Code Blocks */
 .highlight {
     margin: 0.75rem 0;

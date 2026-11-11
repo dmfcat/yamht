@@ -16,15 +16,13 @@
                         </h3>
                     </header>
                     {{ with .Summary }}
-                        <div class="post-content">
-                            <p>
-                                {{ . | plainify | truncate 80 }}
-                            </p>
-                        </div>
+                        <p class="post-content">
+                            {{ . | plainify | truncate 80 }}
+                        </p>
                     {{ end }}
-                    <div class="post-info">
+                    <p class="post-info">
                         {{ with .Params.author }}
-                            <span class="post-author">{{ . }}</span>
+                            <span class="post-author">{{ . }}</span> |
                         {{ end }}
                         {{ with .Date }}
                             <span class="post-date">
@@ -34,16 +32,20 @@
                                     {{ .Format "2 January, 2006" }}
                                 </time>
                             </span>
+                            |
                         {{ end }}
                         {{ if .Params.showreadtime }}
-                            <!-- prettier-ignore -->
-                            <span class="read-time">{{ .ReadingTime }} min read</span>
+                            <span class="read-time"
+                                >{{ .ReadingTime }} min read</span
+                            >
+                            |
                         {{ end }}
                         {{ if .Params.showwordcount }}
-                            <!-- prettier-ignore -->
-                            <span class="word-count">{{ .WordCount }} words</span>
+                            <span class="word-count"
+                                >{{ .WordCount }} words</span
+                            >
                         {{ end }}
-                    </div>
+                    </p>
                 </article>
             </a>
         {{ end }}

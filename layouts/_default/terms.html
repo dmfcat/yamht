@@ -6,10 +6,14 @@
         <h1>{{ .Title }}</h1>
     </header>
     <p class="tag-terms">
-        {{ range site.Taxonomies.tags.ByCount }}
-            {{ $tagPage := site.GetPage (printf "/tags/%s" (.Term | urlize)) }}
-            <!-- prettier-ignore -->
-            <span class="tag"><a href="{{ $tagPage.RelPermalink }}">#{{ .Term }}</a><sup class="count">{{ .Count }}</sup></span>
+        {{ $tags := site.Taxonomies.tags.ByCount }}
+        {{ range $i, $tag := $tags }}
+            {{ $tagPage := site.GetPage (printf "/tags/%s" ($tag.Term | urlize)) }}
+            <span class="tag">
+                <a href="{{ $tagPage.RelPermalink }}">#{{ $tag.Term }}</a
+                ><sup class="count">{{ $tag.Count }}</sup>
+            </span>
+            {{ if lt (add $i 1) (len $tags) }},{{ end }}
         {{ else }}
             <p>No tags found</p>
         {{ end }}
