@@ -55,9 +55,6 @@ main {
     width: min(calc(100% - 2 * var(--gutter)), var(--width-body));
     flex: 1;
 }
-.site-nav {
-    height: 4rem;
-}
 .site-header,
 footer {
     width: 100%;
@@ -143,6 +140,7 @@ footer a:focus-visible,
     justify-content: space-between;
     font-family: var(--font-main);
     align-items: center;
+    height: 4rem;
 }
 .menu-item a,
 .burger-item a {
@@ -304,7 +302,7 @@ video {
 }
 
 /* Burger Icon */
-.burger::-webkit-details-marker {
+.burger::marker {
     display: none;
 }
 .burger {
