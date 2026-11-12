@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ site.Language.Locale | default "en" }}">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {{/* prettier-ignore-start */}}
         <title>
-            <!-- prettier-ignore -->
-            {{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}
+            {{ if not .IsHome }}{{ .Title }} |{{ end }}{{ .Site.Title }}
         </title>
+        {{/* prettier-ignore-end */}}
         {{ $css := resources.Get "css/style.css" | minify | fingerprint }}
         <link href="{{ $css.RelPermalink }}" rel="stylesheet" />
     </head>
