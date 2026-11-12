@@ -17,7 +17,7 @@
                     </header>
                     {{ with .Summary }}
                         <p class="post-summary">
-                            {{ . | plainify | truncate 80 }}
+                            {{ . | plainify | truncate 280 }}
                         </p>
                     {{ end }}
                     {{ if or .Date .Params.showreadtime .Params.showwordcount }}
