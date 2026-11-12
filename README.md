@@ -1,8 +1,6 @@
 # yamht
 
-Yet another minimal Hugo theme.
-
-yamht is a minimalist website theme for Hugo.
+A minimalist website theme for Hugo.
 
 ## Features
 
