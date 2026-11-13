@@ -219,7 +219,7 @@ footer a:focus-visible,
 .page-tags,
 .tags {
     margin-top: 1.5rem;
-    word-spacing: 0.5rem;
+    word-spacing: 1rem;
 }
 
 /* Code Blocks */

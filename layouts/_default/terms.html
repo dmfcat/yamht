@@ -7,13 +7,10 @@
     </header>
     <p class="tags">
         {{ range site.Taxonomies.tags.ByCount }}
-            {{ $tagPage := site.GetPage (printf "/tags/%s" (.Term | urlize)) }}
             <span class="tag">
-                <a href="{{ $tagPage.RelPermalink }}">#{{ .Term }}</a
-                ><sup class="count">{{ .Count }}</sup>
+                <!-- prettier-ignore -->
+                <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}<sup class="count">{{ .Count }}</sup></a>
             </span>
-        {{ else }}
-            <p>No tags found</p>
         {{ end }}
     </p>
 </main>
