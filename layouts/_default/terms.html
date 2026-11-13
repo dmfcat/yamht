@@ -11,6 +11,8 @@
                 <!-- prettier-ignore -->
                 <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}<sup class="count">{{ .Count }}</sup></a>
             </span>
+        {{ else }}
+            <p>No tags found</p>
         {{ end }}
     </p>
 </main>
