@@ -7,7 +7,7 @@
     </header>
     <div class="posts">
         {{ .Content }}
-        {{ range.Data.Pages }}
+        {{ range .Paginator.Pages }}
             <a class="post-snippet" href="{{ .RelPermalink }}">
                 <article>
                     <header class="post-header">
@@ -41,6 +41,7 @@
             </a>
         {{ end }}
     </div>
+    {{ partial "pagination.html" (dict "page" . "format" "terse") }}
 </main>
 
 {{ partial "footer.html" . }}
