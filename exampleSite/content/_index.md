@@ -2,6 +2,6 @@
 title = "yamht"
 +++
 
-Welcome to my home page!
+Yet another minimalist Hugo theme.
 
-[Github](https://github.com/dmfcat/yamht)
+[GitHub](https://github.com/dmfcat/yamht)

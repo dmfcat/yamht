@@ -9,6 +9,8 @@ showWordCount = true
 
 This article shows example fenced code blocks.
 
+<!--more-->
+
 ## Inline Code
 
 `print("Hello World")`
