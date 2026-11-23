@@ -10,7 +10,7 @@ A minimalist website theme for Hugo.
 - Automatic light/dark theme switching between two Catppuccin pastel themes.
 - Responsive layout, with a hamburger menu on mobile devices.
 - Shortcodes for embedding videos and images.
-- Support for blog posts
+- Support for blog posts and pagination.
 - Dedicated page for browsing posts by tag.
 
 ## Getting Started
