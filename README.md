@@ -2,6 +2,8 @@
 
 A minimalist website theme for Hugo.
 
+<img width="1920" height="942" alt="example" src="https://github.com/user-attachments/assets/a5efc46d-b986-4f05-abc2-112532167710" />
+
 ## Features
 
 - Minimalist monochrome design with an accent colour.
