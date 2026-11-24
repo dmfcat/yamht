@@ -14,12 +14,24 @@
                         <h2>
                             {{ .Title }}
                         </h2>
-                        {{ with .Date }}
-                            <span class="post-info">
-                                <time datetime="{{ .Format "2006-01-02" }}">
-                                    {{ .Format "2 January, 2006" }}
-                                </time>
-                            </span>
+                        {{ if or .Date .Params.showreadtime .Params.showwordcount }}
+                            <div class="post-info">
+                                {{ with .Date }}
+                                    <span>
+                                        <time
+                                            datetime="{{ .Format "2006-01-02" }}"
+                                        >
+                                            {{ .Format "2 January, 2006" }}
+                                        </time>
+                                    </span>
+                                {{ end }}
+                                {{ if .Params.showreadtime }}
+                                    <span>{{ .ReadingTime }} min read</span>
+                                {{ end }}
+                                {{ if .Params.showwordcount }}
+                                    <span>{{ .WordCount }} words</span>
+                                {{ end }}
+                            </div>
                         {{ end }}
                     </header>
                     {{ with .Summary }}

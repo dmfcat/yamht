@@ -189,7 +189,7 @@ a[aria-current="page"]:not(.pagination a) {
     justify-content: space-between;
 }
 .post-header h2 {
-    margin: 1rem 0 0.2rem;
+    margin: 1rem 0 0;
 }
 .post-info,
 .page-info {
