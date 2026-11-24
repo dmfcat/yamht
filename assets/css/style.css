@@ -106,15 +106,17 @@ a,
 }
 
 /* Links */
-a:not(.post-snippet) {
+.site-header a,
+.post-snippet a {
     text-decoration: none;
-    font-weight: bold;
+}
+a:hover:not(.site-header a, .post-snippet a),
+a:focus-visible:not(.site-header a, .post-snippet a) {
+    color: color-mix(in srgb, var(--accent-color), white 20%);
 }
 main a:visited:not(.page-link) {
     color: color-mix(in srgb, var(--accent-color), black 20%);
 }
-a:hover:not(.site-nav a, .post-snippet),
-a:focus-visible:not(.site-nav a, .post-snippet),
 .post-snippet:hover h2,
 .post-snippet:focus-visible h2,
 a[aria-current="page"] {
